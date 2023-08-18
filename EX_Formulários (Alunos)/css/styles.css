@@ -1,0 +1,106 @@
+/* Definição de estilo do corpo da página */
+body {
+    background-color: #f8f8f8;  /* Cor de fundo do corpo */
+}
+
+/* Estilos do formulário */
+#form-container {
+    background-color: #fff; /* Cor de fundo do formulário */
+    border-radius: 20px; /* Arredondamento das bordas */
+    box-shadow: .5px 10px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    margin: 25px auto; /* Margens */
+    padding: 25px; /* Preenchimento interno */
+}
+
+/* Estilos específicos para larguras de tela maiores ou iguais a 768px */
+@media(min-width: 768px) {
+    #form-container h2 {
+        margin: 50px auto;
+        padding: 50px;
+    }
+}
+
+/* Estilos para os cabeçalhos do formulário */
+#form-container h2 {
+    font-weight: 900; /* Peso da fonte */
+    margin-bottom: 30px; /* margem inferior */ 
+}
+
+/* Estilos para os links dentro do formulário */
+#form-container a {
+    color: #222; /* Cor do texto do link */
+    transition: .5s; /* Transição suave */ 
+}
+
+/* Estilos para os links dentro do formulário quando houver */
+#form-container a:hover {
+    color: #009033; /* Cor do texto do link ao passar o mouse */
+}
+
+/* Estilos para o formulário em si */
+#form-container form {
+    padding-bottom: 50px; /* Preenchimento inferior */
+}
+
+/* Estilos para os campos de entrada de formulário */
+#form-container .form-control {
+    border: none; /* Sem borda */
+    border-bottom: 1px solid #CCC; /* Borda inferior */
+    border-radius: 0; /* Sem arredondamento */
+}
+
+/* Estilos para os campos de entrada quando em foco */
+#form-container .form-control:focus {
+    box-shadow: none; /* Sem sombra */
+}
+
+/* Estilos para os rótulos flutuantes */
+#form-container .form-floating label {
+    color: #CCC; /* Cor do rótulo */
+}
+
+/* Estilos para os rótulos flutuantes quando o campo está em foco */
+#form-container .form-floating > .form-control:focus~label {
+    color: #222; /* Cor do rótulo quando em foco */
+}
+
+/* Estilos para os checkboxes marcados e botão de envio do formulário */
+#form-container .form-check-input:checked, #form-container input[type="submit"] {
+    background-color: #00BF57; /* Cor de fundo */
+    border-color: #00BF57; /* Cor da borda */
+}
+
+/* Estilos para botões primários */
+.btn.btn-primary {
+    width: 100%; /* Largura total */
+}
+
+/* Estilos para botão personalizado com classe "botao" */
+.botao {
+    background-color: #00BF57 !important; /* Cor de fundo do botão */
+    border-color: #00BF57 !important; /* Cor da borda dp botão */
+}
+.botao:hover {
+    background-color: #009033 !important; /* Cor de fundo do botão ao passar o mouse */
+    border-color: #009033 !important; /* Cor da borda do botão ao passar o mouse */
+}
+
+/* Estilos para larguras de tela maiores ou iguais a 768px */
+@media(min-width: 768px) {
+    /* Estilos para botões primários em telas grandes */
+    .btn.btn-primary {
+        width: auto; /*Largura automática */
+    }
+}
+
+/* Estilos para alinhar conteúdo verticalmente */
+.row.align-items-center {
+    align-content: center; /* Alinhamento vertical do conteúdo */
+    height: 100%; /* Altura total */
+}
+
+/* Estilos para ocontainer de links */
+#link-container {
+    text-align: center; /* Alinhamento do texto ao centro */
+    padding-top: 50px; /* Preenchimento superior */
+}
