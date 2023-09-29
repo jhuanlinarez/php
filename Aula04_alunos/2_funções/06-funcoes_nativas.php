@@ -18,7 +18,12 @@ $nome = "Ignacio Cunha        ";
 $nomeSemEspaco = trim($nome);
 ?>
 
-<!-- 1ª Digitação (Aqui) -->
+<pre> <?=var_dump($nome)?> </pre>
+<pre><?=var_dump(trim($nome))?></pre>
+<pre> <?=var_dump($$nomeSemEspaco)?> </pre>
+
+<p>Meu teste</p>
+<pre> </pre>
 
 <!-- ___________________________________________________________ -->
 <!-- Substitui um texto por outro-->
@@ -27,8 +32,11 @@ $nomeSemEspaco = trim($nome);
 $fraseFeia = "<p>Fulano é um bobão e xarope</p>";
 
 
-//  2ª Digitação (Aqui)
-
+$fraseBonita = str_replace(
+    ["bobao", "xarope"],
+    ["cara legal", "genial"],
+    $fraseFeia
+);
 
 echo $fraseFeia;
 echo $fraseBonita;
