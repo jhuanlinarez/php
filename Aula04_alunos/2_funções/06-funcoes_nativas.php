@@ -45,19 +45,24 @@ echo $fraseBonita;
 <!-- Separa os texto através de um delimitador -->
 <h3>explode</h3>
 <?php
-$linguagens = "HTML - CSS - JS";
-$arrayLinguagens = explode(" - ", $linguagens);
+$linguagens = "Jhuan Linarez Eugenio";
+$arrayLinguagens = explode(" ", $linguagens);
 
 ?>
 
-<!-- 3ª Digitação (Aqui) -->
+<pre> <?=var_dump($linguagens)?></pre>
+<pre><?=var_dump($arrayLinguagens)?></pre>
 
 <!-- ___________________________________________________________ -->
 <hr>
     <h2>Arrays</h2>
     <h3>implode()</h3>
 
-<!-- 4ª Digitação (Aqui) -->
+<?php
+    $bandas = ["Savage","Nightwish","Ghost"];
+    $stringBandas = implode(" | ",$bandas);
+
+?>
 
 <pre> <?=var_dump($bandas)?> </pre>
 <pre> <?=var_dump($stringBandas)?> </pre>
@@ -65,12 +70,39 @@ $arrayLinguagens = explode(" - ", $linguagens);
 <!-- Simplifica a saída -->
     <h3>extract()</h3>
 
-<!-- 5ª Digitação (Aqui) -->
+<?php
+    $aluno = [
+        "id" => "Fulano",
+        "idade" => 25,
+        "sexo" => "masculino",
+        "cidade" => "Santo André"
+
+    ];
+    extract($aluno);
+?>
 
 <p> <?=$id?> </p>
 <p> <?=$idade?> </p>
 <p> <?=$sexo?> </p>
 <p> <?=$cidade?> </p>
+
+<hr>
+
+<?php
+    $sesi = [
+        "id" => "Jhuan",
+        "idade" => 16,
+        "numerodosesi" => 166,
+        "nomedaclasse" => "1DE"
+
+    ];
+    extract($sesi);
+?>
+
+<p> <?=$id?> </p>
+<p> <?=$idade?> </p>
+<p> <?=$numerodosesi?> </p>
+<p> <?=$nomedaclasse?> </p>
 
 <!-- ___________________________________________________________ -->
 <hr>
@@ -78,15 +110,18 @@ $arrayLinguagens = explode(" - ", $linguagens);
 <!-- Filtra indicando um preenchimento errado -->
     <h2>Filtros</h2>
 <?php
-$email = "ignacio@gmail.com.br";
-$ataque = "<script> document.body.innerHTML = 'Sou ráqui!! hahahah >.<' </script>";
+  $email = "ignacio@gmail.com.br";
+  $ataque = "<script> document.body.innerHTML = '<h1>Sou ráqui!! hahahah >.<</h1>' </script>";
 
-// echo $ataque;
+//   echo $ataque;
 
-//  6ª Digitação (Aqui)
+  $ataqueAnulado = filter_var($ataque,FILTER_SANITIZE_SPECIAL_CHARS);
+
+  echo $ataqueAnulado;
 
 ?>
 
+echo $ataqueAnulado;
 
 <p>
     <?=var_dump(filter_var($email, FILTER_VALIDATE_EMAIL))?>
